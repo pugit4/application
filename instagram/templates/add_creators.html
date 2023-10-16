@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>File</title>
+<style>
+input {
+    margin: 15px;
+    padding: 14px 16px;
+    border-radius: 5px;
+}
+
+a{
+  border: 1px solid black;
+  padding: 4px 8px;
+  margin:  10px;
+  border-radius: 5px;  
+}
+</style>
+</head>
+<body>
+    
+
+<div>
+<h2>Add detailes of content creators below</h2>    
+   <form method="POST">
+   {% csrf_token %}
+   
+     <input type="text" name="fname" placeholder="Enter firstname.." style="width:150px">
+     <br><br>
+
+     <input type="text" name="lname" placeholder="Enter lastname.." style="width:150px">
+     <br><br>
+
+
+     <button type="submit" value="submit">Submit</button>
+     <a href="{% url "homepage" %}">Homepage</a>
+
+   </form> 
+</div>
+
+</body>
+</html>

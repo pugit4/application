@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>File</title>
+<style>
+input {
+    margin: 15px;
+    padding: 14px 16px;
+    border-radius: 5px;
+}    
+</style>
+</head>
+<body>
+    
+
+<div>
+<h2>Update details of content creators below</h2>    
+   <form method="POST">
+   {% csrf_token %}
+   
+     <input type="text" name="fname" placeholder="Enter firstname.." style="width:150px" value="{{ content.firstname }}">
+     <br><br>
+
+     <input type="text" name="lname" placeholder="Enter lastname.." style="width:150px" value="{{ content.lastname }}">  
+     <br><br>
+
+    <center>
+     <button type="submit">Update</button>
+     <button type="submit">Homepage</button>
+    </center>
+
+   </form> 
+</div>
+
+</body>
+</html>
